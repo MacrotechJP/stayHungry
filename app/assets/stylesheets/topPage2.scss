@@ -122,7 +122,107 @@
     }
   }
 }
-.main{
+.newinfo{
   width:100%;
-  height:2000px;
+  &_title{
+    width:100%;
+    height:100px;
+    margin-top:50px;
+    @include 上下左右中央();
+    p{
+      font-weight: bold;
+      font-size: 15px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid black;
+    }
+  }
+  &_main{
+    width:100%;
+    @include 上下左右中央();
+    iframe{
+      width:400px!important;
+    }
+  }
+}
+.menu{
+  width:100%;
+  height:1000px;
+  &_title{
+    width:100%;
+    height:100px;
+    margin-top:50px;
+    @include 上下左右中央();
+    p{
+      font-weight: bold;
+      font-size: 15px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid black;
+    }
+  }
+  &_main{
+    width:80%;
+    height:100%;
+    margin:0 10%;
+    background-color: red;
+  }
+}
+.location{
+  width:100%;
+  height:1000px;
+  &_title{
+    width:100%;
+    height:100px;
+    margin-top:50px;
+    @include 上下左右中央();
+    p{
+      font-weight: bold;
+      font-size: 15px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid black;
+    }
+  }
+  &_main{
+    width:80%;
+    height:450px;
+    padding:0 10%;
+    &_left{
+      width:60%; 
+      height:100%;
+      float: left;
+      iframe,img{
+        width:100%; 
+        height:100%;
+      }
+      img{display: none;}
+    }
+    &_center{
+      width:5%;
+      height:100%;
+      margin-right: 5%;
+      float: left;
+      @include 上下左右中央();
+      i{
+        font-size: 1.8em;
+        &:hover{
+          cursor: pointer;
+          opacity: 0.6;
+        }
+      }
+      .fa-arrow-alt-circle-left{display: none;}
+    }
+    &_right{
+      width:30%;
+      height:100%;
+      float: left;
+      p{
+        font-size: 13px;
+        margin-bottom: 10px;
+        line-height: 2.6;
+        font-family: "Yu Mincho", "YuMincho", serif;
+        letter-spacing: 0.2em;
+        color:#333;
+      }
+      a:hover p{opacity: 0.6;}
+    }
+  }
 }
