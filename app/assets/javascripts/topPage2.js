@@ -8,14 +8,6 @@ $(function(){
     $("html, body").animate({scrollTop:position}, speed, "swing");
     return false;
   });
-  //スムーススクロール(下から上へ)
-  $('a[href^=#]').click(function(){
-    event.preventDefault();
-    var target = $(this.hash);
-    if (!target.length) return;
-    var targetY = target.offset().top;
-    $('body').animate({scrollTop: targetY}, 500, 'swing');
-  });
 
   //ロケーション画像変更
   $(".fa-arrow-alt-circle-right").on("click",function(){  //右向き矢印クリック時
@@ -30,4 +22,21 @@ $(function(){
     $(".location_main_left iframe").fadeIn(1000);        //Google map表示
     $(".fa-arrow-alt-circle-right").show();              //右矢印アイコン表示
   })
+
+  $(function(){
+		$('.photo_main_scroll1').infiniteslide({
+			'speed': 30, //speed this is px/min
+			'direction': 'left', //choose  up/down/left/right
+			'pauseonhover': true, //if true,stop onmouseover
+			'responsive': false, //width/height recalculation on window resize. child element's width/height define %/vw/vh,this set true.
+			'clone': 1 //if child elements are too few (elements can't "infinite"), set 2 or over.
+    });
+    $('.photo_main_scroll2').infiniteslide({
+			'speed': 30, //speed this is px/min
+			'direction': 'right', //choose  up/down/left/right
+			'pauseonhover': true, //if true,stop onmouseover
+			'responsive': false, //width/height recalculation on window resize. child element's width/height define %/vw/vh,this set true.
+			'clone': 1 //if child elements are too few (elements can't "infinite"), set 2 or over.
+		});
+	});
 });
