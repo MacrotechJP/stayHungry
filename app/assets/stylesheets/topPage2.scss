@@ -3,9 +3,21 @@
   justify-content: center;
   align-items: center;
 }
+.back_image{
+  position: fixed;
+  top:0;
+  width:100vw;
+  height:100vh;
+  z-index: -100;
+  img{
+    width:100%;
+    height:100%;
+  }
+}
 .header_top{
   width:100%;
   height:85vh;
+  background-color: white;
   &_left{
     float: left;
     width: 25%;
@@ -14,8 +26,6 @@
     &_logo{
       margin-top:40%;
       height:45%;
-      // @include 上下左右中央();
-      background-color: white;
       &_sns{
         width:10%;
         height:100%;
@@ -76,6 +86,7 @@
 .header_bottom{
   width:100%;
   height:15vh;
+  background-color: white;
   &_left,&_right {
     a{
       text-decoration: none;
@@ -124,10 +135,11 @@
 }
 .newinfo{
   width:100%;
+  background-color: white;
   &_title{
     width:100%;
     height:100px;
-    margin-top:50px;
+    padding-top:50px;
     @include 上下左右中央();
     p{
       font-weight: bold;
@@ -144,12 +156,76 @@
     }
   }
 }
-.menu{
+.message{
   width:100%;
   &_title{
     width:100%;
     height:100px;
-    margin-top:50px;
+    padding-top:50px;
+    background-color: white;
+    @include 上下左右中央();
+    p{
+      font-weight: bold;
+      font-size: 15px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid black;
+    }
+  }
+  &_main{
+    width:100%;
+    &_top{
+      width:100%;
+      height:500px;
+      background-color: white;
+      &_center{
+        width:80%;
+        height:100%;
+        margin-left:10%;
+        &_left{
+          width:30%;
+          height:100%;
+          float: left;
+          @include 上下左右中央();
+          &_bigword{
+            overflow: auto;
+            p{
+              font-size: 1.6rem;
+              line-height: 3;
+              letter-spacing: .4em;
+              font-family: "Yu Mincho", "YuMincho", serif;
+            }
+          }
+        }
+        &_right{
+          width:70%;
+          height:100%;
+          float: left;
+          @include 上下左右中央();
+          &_smallword{
+            overflow: auto;
+            p{
+              font-size: 13px;
+              line-height: 2.6;
+              font-family: "Yu Mincho", "YuMincho", serif;
+              letter-spacing: 0.2em;
+            }
+          }
+        }
+      }
+    }
+    &_bottom{
+      width:100%;
+      height:500px;
+    }
+  }
+}
+.menu{
+  width:100%;
+  background-color: white;
+  &_title{
+    width:100%;
+    height:100px;
+    padding-top:50px;
     @include 上下左右中央();
     p{
       font-weight: bold;
@@ -230,10 +306,11 @@
 }
 .photo{
   width:100%;
+  background-color: white;
   &_title{
     width:100%;
     height:100px;
-    margin-top:50px;
+    padding-top:50px;
     @include 上下左右中央();
     p{
       font-weight: bold;
@@ -281,10 +358,11 @@
 
 .location{
   width:100%;
+  background-color: white;
   &_title{
     width:100%;
     height:100px;
-    margin-top:50px;
+    padding-top:50px;
     @include 上下左右中央();
     p{
       font-weight: bold;
@@ -338,14 +416,72 @@
     }
   }
 }
+.contact{
+  width:100%;
+  background-color: white;
+  &_title{
+    width:100%;
+    height:100px;
+    padding-top:50px;
+    @include 上下左右中央();
+    &_top{
+      @include 上下左右中央();
+      p{
+        font-weight: bold;
+        font-size: 15px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid black;
+      }
+    }
+  }
+  &_main{
+    width:80%;
+    padding:0 10%;
+    &_top{
+      width:100%;
+      @include 上下左右中央();
+      p{
+        text-align: center;
+        font-size: 13px;
+        line-height: 3;
+        letter-spacing: .4em;
+        font-family: "Yu Mincho", "YuMincho", serif;
+        span{
+          font-weight: bold;
+        }
+      }
+    }
+    &_bottom{
+      width:100%;
+      @include 上下左右中央();
+      padding-top: 50px;
+      &_phone{
+        width:30%;
+        height:90px;
+        font-size: 25px;
+        border:1px solid black;
+        box-sizing: border-box;
+        @include 上下左右中央();
+        &:hover{
+          background-color: #999999;
+        }
+        a{
+          color: black;
+          &:hover{color:white;}
+        }
+      }
+    }
+  }
+}
 .footer{
   width:100%;
-  height:500px;
-  margin-top:100px;
+  // height:500px;
+  padding-top:100px;
+  background-color: white;
   &_top{
     width:70%;
     margin-left: 15%;
-    height:300px;
+    overflow: auto;
     &_menu{
       width:20%;
       height:80px;
@@ -377,6 +513,17 @@
           }
         }
       }
+    }
+  }
+  &_bottom{
+    width:70%;
+    margin-left: 15%;
+    padding: 50px 0;
+    text-align: center;
+    p{
+      font-size: 13px;
+      line-height: 3;
+      font-family: "Yu Mincho", "YuMincho", serif;
     }
   }
 }
