@@ -4,6 +4,7 @@
     <title>StayHungry</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= analytics_init if Rails.env.production? %>
     <link href="https://use.fontawesome.com/releases/v5.0.0/css/all.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/infiniteslidev2/infiniteslidev2.min.js"></script>
