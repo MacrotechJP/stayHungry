@@ -74,6 +74,10 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 end
 gem 'google-analytics-rails'
 gem 'jp_prefecture'
+gem 'rb-readline'
