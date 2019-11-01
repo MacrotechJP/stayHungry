@@ -65,5 +65,10 @@ $(function(){
 			'responsive': false, //width/height recalculation on window resize. child element's width/height define %/vw/vh,this set true.
 			'clone': 1 //if child elements are too few (elements can't "infinite"), set 2 or over.
 		});
-	});
+  });
+  
+  //flashメッセージ自動非表示
+  $(function(){
+    setTimeout("$('.notifications').fadeOut('slow')", 3000) 
+  })
 });

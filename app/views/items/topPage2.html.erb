@@ -1,3 +1,8 @@
+<div class="notifications">
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: key) %>
+  <% end %>
+</div>
 <div class="back_image">
   <%= image_tag "autoScroll2_11.jpg",class:"sitelogo" %>
 </div>
@@ -132,6 +137,105 @@
     </div>
     <div class="contact_main_bottom">
       <p class="contact_main_bottom_phone"><a href="tel:070-4285-1829">TEL 070-4285-1829</a></p>
+      <p class="contact_main_bottom_phone">資料請求</p>
+      <div class="contact_main_bottom_claim">
+        <%= form_tag(top1_path) do %>
+          <div class="contact_main_bottom_claim_item">
+            <div class="contact_main_bottom_claim_item_left">お問い合わせ項目<span class="form__required">必須</span></div>
+            <div class="contact_main_bottom_claim_item_right">
+              <input type="radio" name="form_item" value="フランチャイズ" required>フランチャイズ 経営について　
+              <input type="radio" name="form_item" value="軒先ビジネス">軒先ビジネスについて　
+              <input type="radio" name="form_item" value="広告掲載">広告掲載について　
+              <input type="radio" name="form_item" value="">ご意見・ご要望
+            </div>
+          </div>
+          <div class="contact_main_bottom_claim_item">
+            <div class="contact_main_bottom_claim_item_left">お問い合わせ内容<span class="form__required">必須</span></div>
+            <div class="contact_main_bottom_claim_item_right">
+              <textarea placeholder="お問い合わせ内容をご記入ください" required></textarea>
+            </div>
+          </div>
+          <div class="contact_main_bottom_claim_item">
+            <div class="contact_main_bottom_claim_item_left">お名前 (漢字)<span class="form__required">必須</span></div>
+            <div class="contact_main_bottom_claim_item_right">
+              <input type="text" placeholder="名前(漢字)をご記入ください（例）田中　太郎" required>
+            </div>
+          </div>
+          <div class="contact_main_bottom_claim_item">
+            <div class="contact_main_bottom_claim_item_left">フリガナ (カナ)<span class="form__required">必須</span></div>
+            <div class="contact_main_bottom_claim_item_right">
+              <input type="text" placeholder="フリガナ(カナ)をご記入ください（例）タナカ　タロウ" required>
+            </div>
+          </div>
+          <div class="contact_main_bottom_claim_item">
+            <div class="contact_main_bottom_claim_item_left">メールアドレス<span class="form__required">必須</span></div>
+            <div class="contact_main_bottom_claim_item_right">
+              <input type="email" placeholder="メールアドレスをご記入ください（例）example@example.com" required>
+            </div>
+          </div>
+          <div class="contact_main_bottom_claim_item">
+            <div class="contact_main_bottom_claim_item_left">性別</div>
+            <div class="contact_main_bottom_claim_item_right">
+              <input type="radio" name="form_sex" value="女性">女性　
+              <input type="radio" name="form_sex" value="男性">男性
+            </div>
+          </div>
+          <div class="contact_main_bottom_claim_item">
+            <div class="contact_main_bottom_claim_item_left">年齢</div>
+            <div class="contact_main_bottom_claim_item_right">
+              <input type="radio" name="form_age" value="10代">10代　
+              <input type="radio" name="form_age" value="20代">20代　
+              <input type="radio" name="form_age" value="30代">30代　
+              <input type="radio" name="form_age" value="40代">40代　
+              <input type="radio" name="form_age" value="50代">50代　
+              <input type="radio" name="form_age" value="60代以降">60代以降
+            </div>
+          </div>
+          <div class="contact_main_bottom_claim_item">
+            <div class="contact_main_bottom_claim_item_left">郵便番号</div>
+            <div class="contact_main_bottom_claim_item_right">
+              <input type="text" placeholder="郵便番号をご記入ください（例）123-4567">
+            </div>
+          </div>
+          <div class="contact_main_bottom_claim_item">
+            <div class="contact_main_bottom_claim_item_left">住所</div>
+            <div class="contact_main_bottom_claim_item_right">
+              <select>
+                <option name="jp_pref">都道府県を選択
+                <% JpPrefecture::Prefecture.all.each do |jp| %>
+                  <option name="jp_pref"><%= jp.name %>
+                <% end %>
+              </select>
+            </div>
+          </div>
+          <div class="contact_main_bottom_claim_item top_none">
+            <div class="contact_main_bottom_claim_item_left"></div>
+            <div class="contact_main_bottom_claim_item_right">
+              <input type="text" placeholder="(例: 中央区日本橋茅場町)">
+            </div>
+          </div>
+          <div class="contact_main_bottom_claim_item top_none">
+            <div class="contact_main_bottom_claim_item_left"></div>
+            <div class="contact_main_bottom_claim_item_right">
+              <input type="text" placeholder="(例: ○○丁目-○番-○号)">
+            </div>
+          </div>
+          <div class="contact_main_bottom_claim_item top_none">
+            <div class="contact_main_bottom_claim_item_left"></div>
+            <div class="contact_main_bottom_claim_item_right">
+              <input type="text" placeholder="(例: ○○マンション○○号)">
+            </div>
+          </div>
+          <div class="contact_main_bottom_claim_item">
+            <div class="contact_main_bottom_claim_item_left">電話番号<span class="form__required">必須</span></div>
+            <div class="contact_main_bottom_claim_item_right">
+              <input type="tel" placeholder="電話番号をご記入ください（例）080-1234-5678" required>
+            </div>
+          </div>
+          <p class="contact_main_bottom_claim_cheack">入力内容をご確認の上、「送信」ボタンを押して下さい。</p>
+          <input type="submit" class="contact_main_bottom_claim_submit">
+        <% end %>  
+      </div>
     </div>
   </div>
 </div>

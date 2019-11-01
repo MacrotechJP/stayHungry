@@ -76,3 +76,4 @@ group :development, :test do
   gem 'capistrano3-unicorn'
 end
 gem 'google-analytics-rails'
+gem 'jp_prefecture'
