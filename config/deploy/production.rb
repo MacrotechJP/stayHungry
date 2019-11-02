@@ -59,14 +59,3 @@ server '54.65.37.37', user: 'ec2-user', roles: %w{app db web}
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    port:                 587,
-    address:              'smtp.gmail.com',
-    domain:               'gmail.com',
-    user_name: "tanakakoyo1999@gmail.com",
-    password:  "aovosplpekpfuizy",
-    authentication:       'login',
-    enable_starttls_auto: true
-  }
