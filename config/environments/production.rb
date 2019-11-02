@@ -91,10 +91,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-end
-# トラッキングIDを記載
-GA.tracker = "UA-149914411-1"
-config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     port:                 587,
@@ -105,3 +103,7 @@ config.action_mailer.raise_delivery_errors = true
     authentication:       'login',
     enable_starttls_auto: true
   }
+
+end
+# トラッキングIDを記載
+GA.tracker = "UA-149914411-1"
