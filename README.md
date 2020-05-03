@@ -1,24 +1,5 @@
-# README
+# stayHungry
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+大阪市にあるテイクアウト専門店の専用サイト。
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+インスタサイト：[https://www.instagram.com/hungry.stay/](https://www.instagram.com/hungry.stay/)
